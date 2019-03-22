@@ -1,0 +1,12 @@
+version: "2"
+services:
+  bitcoind:
+      image: "josudoey/bitcoin-abc:v0.19.1"
+    volumes:
+      - "./data:/bitcoin"
+    ports:
+      - "8332:8332"
+      - "8333:8333"
+      - "28332:28332"
+      - "28333:28333"
+    command: bitcoind -server  -txindex=1 -rpcallowip=::/0 -rpcbind=0.0.0.0  -rpcuser=bitcoin -rpcpassword=password -printtoconsole=1 -zmqpubrawblock=tcp://0.0.0.0:28332 -zmqpubrawtx=tcp://0.0.0.0:28333
