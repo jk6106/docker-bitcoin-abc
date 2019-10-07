@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN add-apt-repository -y ppa:bitcoin-abc/ppa
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-                bitcoind=v0.20.2-uahf-xenial1 \
+                bitcoind=0.20.2-uahf-xenial1 \
         && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 8332 8333 18332 18333 28332 28333
