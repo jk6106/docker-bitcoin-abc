@@ -1,7 +1,7 @@
 version: "2"
 services:
   bitcoind:
-    image: "josudoey/bitcoin-abc:v0.19.6"
+    image: "josudoey/bitcoin-abc:v0.20.2"
     volumes:
       - "./data:/bitcoin"
     ports:
